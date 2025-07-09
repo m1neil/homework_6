@@ -1,0 +1,23 @@
+.size {
+	padding-block: 25px;
+}
+.size-items {
+	display: flex;
+	column-gap: 25px;
+	margin-bottom: 25px;
+}
+.size-value {
+	span {
+		color: var(--accent-color);
+		font-weight: 500;
+	}
+}
+.size-device {
+	max-width: 269px;
+	aspect-ratio: 269 / 187;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

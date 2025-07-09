@@ -1,10 +1,11 @@
 import { useEffect } from 'react'
 import useWindowSize from '../../hooks/useWindowSize'
+import './windowSize.css'
 
 function WindowSize() {
 	const { widthWindow, heightWindow, handleWindowSizeChange } = useWindowSize()
 	const devices = {
-		pc: 'https://w7.pngwing.com/pngs/404/255/png-transparent-computer-monitors-4k-resolution-display-resolution-1080p-monitors-gadget-electronics-computer.png',
+		pc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIJZr61OQ45oI3ZfS6k4Oyolt5VvUSWUL5Qg&s',
 		tablet: 'https://freepngimg.com/save/1938-tablet-png-image/1500x1109',
 		mobile:
 			'https://www.vhv.rs/dpng/d/7-72850_new-mobile-phone-png-transparent-png.png',
@@ -27,13 +28,21 @@ function WindowSize() {
 
 	return (
 		<div className="size">
-			<div className="size-value">Width: {widthWindow}px</div>
-			<div className="size-value">Height: {heightWindow}px</div>
-			<div className="size-device">
-				<img
-					src={imageDevice}
-					alt="device"
-				/>
+			<div className="size-container">
+				<div className="size-items">
+					<div className="size-value">
+						Width: <span>{widthWindow}px</span>
+					</div>
+					<div className="size-value">
+						Height: <span>{heightWindow}px</span>
+					</div>
+				</div>
+				<div className="size-device">
+					<img
+						src={imageDevice}
+						alt="device"
+					/>
+				</div>
 			</div>
 		</div>
 	)

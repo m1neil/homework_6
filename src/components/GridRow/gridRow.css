@@ -1,0 +1,15 @@
+.grid-row {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	border-bottom: 1px solid #cbd5e1;
+	&:last-child {
+		border-bottom: none;
+	}
+}
+.grid-row-item {
+	padding: 12px 15px;
+	border-right: 1px solid #cbd5e1;
+	&:last-child {
+		border-right: none;
+	}
+}

@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import ResultDisplay from '../ResultDisplay/ResultDisplay'
+import './calculator.css'
 
 function Calculator() {
 	const [valueA, setValueA] = useState('')
@@ -37,31 +38,31 @@ function Calculator() {
 			<div className="calculator-container">
 				<div className="calculator-row">
 					<label className="calculator-label">
-						Value A
+						<span>Value A</span>
 						<input
 							value={valueA}
 							type="text"
 							name="value-a"
-							className="calculator-input"
+							className="calculator-input input"
 							onChange={handleValueAChange}
 						/>
 					</label>
 				</div>
 				<div className="calculator-row">
 					<label className="calculator-label">
-						Value b
+						<span>Value b</span>
 						<input
 							value={valueB}
 							type="text"
 							name="value-b"
-							className="calculator-input"
+							className="calculator-input input"
 							onChange={handleValueBChange}
 						/>
 					</label>
 				</div>
 				<button
 					type="button"
-					className="calculator-button"
+					className="calculator-button button"
 					onClick={increaseCount}
 				>
 					Count: {count}

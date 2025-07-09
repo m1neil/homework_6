@@ -1,0 +1,35 @@
+.lock body {
+	overflow: hidden;
+	touch-action: none;
+	overscroll-behavior: none;
+}
+
+/* Оболонка wrapper ==================================================== */
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.wrapper > main {
+	flex: 1 1 auto;
+}
+
+.wrapper > * {
+	min-width: 0;
+}
+
+@supports (overflow: clip) {
+	.wrapper {
+		overflow: clip;
+	}
+}
+
+/* Обмежуючий контейнер ====================================================*/
+
+[class*='-container'] {
+	max-width: var(--containerWidth);
+	margin-inline: auto;
+	padding-inline: 15px;
+}

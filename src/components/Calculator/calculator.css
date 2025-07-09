@@ -1,0 +1,30 @@
+.calculator {
+	padding-block: 50px 25px;
+}
+.calculator-container {
+}
+.calculator-row {
+	&:not(:last-child) {
+		margin-bottom: 16px;
+	}
+}
+.calculator-label {
+	display: flex;
+	align-items: center;
+	font-weight: 500;
+	font-size: 16px;
+	color: #000;
+	text-transform: capitalize;
+	column-gap: 16px;
+}
+.calculator-label span {
+	flex-shrink: 0;
+}
+.calculator-input {
+	flex-grow: 1;
+	max-width: 279px;
+}
+.calculator-button {
+	min-width: 120px;
+	margin-bottom: 15px;
+}

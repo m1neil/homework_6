@@ -1,0 +1,9 @@
+@import url('./null');
+@import url('./form/');
+
+.title {
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 1.55556;
+	color: var(--accent-color);
+}

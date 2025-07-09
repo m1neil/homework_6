@@ -1,0 +1,96 @@
+select,
+::picker(select) {
+	appearance: base-select;
+}
+::picker(select) {
+	border: 1px solid #f1f5f9;
+	border-radius: 6px;
+	padding: 5px;
+	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.09);
+	opacity: 0;
+	transition: all 0.3s allow-discrete;
+	top: calc(anchor(bottom) + 6px);
+	left: anchor(0);
+	transform: translateY(15px);
+}
+
+::picker(select):popover-open {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@starting-style {
+	::picker(select):popover-open {
+		opacity: 0;
+		transform: translateY(15px);
+	}
+}
+
+select {
+	&::picker-icon {
+		content: '';
+		width: 13px;
+		aspect-ratio: 1;
+		background: url('../../../assets/icons/arrow.svg') center / contain
+			no-repeat;
+		transition: rotate 0.3s;
+		will-change: rotate;
+		flex-shrink: 0;
+	}
+	&:open::picker-icon {
+		rotate: 180deg;
+	}
+}
+
+.select {
+	width: 100%;
+	border: 1px solid #cbd5e1;
+	border-radius: 6px;
+	height: 40px;
+	padding-inline: 12px;
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+	font-size: 16px;
+	line-height: 1.71429;
+	color: var(--accent-color);
+	outline: none;
+	transition: border-color 0.3s;
+	option {
+		border-radius: 6px;
+		padding: 6px 8px;
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.42857;
+		color: #334155;
+		outline: none;
+		border: 1px solid transparent;
+		transition: background-color 0.3s, border-color 0.3s;
+		&:focus-visible {
+			border-color: var(--accent-color);
+		}
+		&::checkmark {
+			content: '';
+			width: 14px;
+			aspect-ratio: 1;
+			flex-shrink: 0;
+			background: url('../../../assets/icons/checkmark.svg') center / contain
+				no-repeat;
+		}
+		&:checked {
+			background-color: #f1f5f9;
+		}
+	}
+}
+
+@media (any-hover: hover) {
+	.select option:hover:not(:checked) {
+		background-color: #e8eff6;
+	}
+	.select:focus-visible {
+		border-color: var(--accent-color);
+	}
+}
