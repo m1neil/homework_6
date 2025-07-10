@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import ResultDisplay from '../ResultDisplay/ResultDisplay'
+import Task from '../Task/Task'
 import './calculator.css'
 
 function Calculator() {
@@ -36,6 +37,12 @@ function Calculator() {
 	return (
 		<div className="calculator">
 			<div className="calculator-container">
+				<Task
+					title="Задача 1. Оптимізація вибіркового рендеру з useMemo та React.memo"
+					text={[
+						'Створіть компонент-калькулятор, який має два незалежні поля вводу: одне для числа A і одне для числа B. Також є окремий компонент ResultDisplay, який відображає A + B. Обгорніть ResultDisplay у React.memo(). Використайте useMemo в батьківському компоненті, щоб обчислити A + B і передати цей результат до ResultDisplay. Переконайтеся, що ResultDisplay ререндериться лише тоді, коли змінюються A або B, а не коли змінюється інший незалежний стан у батьківському компоненті (наприклад, лічильник, що не впливає на A чи B)',
+					]}
+				/>
 				<div className="calculator-row">
 					<label className="calculator-label">
 						<span>Value A</span>

@@ -1,5 +1,6 @@
 import { useDeferredValue, useMemo, useState } from 'react'
 import GridRow from '../GridRow/GridRow'
+import Task from '../Task/Task'
 import './dataGrid.css'
 
 function DataGrid({ users }) {
@@ -86,6 +87,18 @@ function DataGrid({ users }) {
 	return (
 		<div className="data-grid">
 			<div className="data-grid-container">
+				<Task
+					title="Задача 2. Таблиця з фільтрацією та сортуванням, чутлива до UI"
+					list={[
+						'Створіть компонент DataGrid (батьківський) та GridRow (дочірній).',
+						'DataGrid отримує великий масив даних, має поле вводу для фільтрації, кнопки для сортування за різними колонками.',
+						'GridRow (обгорнутий у React.memo) відображає один рядок даних.',
+						'Використайте useDeferredValue для пошукового запиту та/або параметрів сортування.',
+						'Використайте useMemo для обчислення відфільтрованих та відсортованих даних на основі відкладених значень.',
+						'Використайте useCallback для функцій-обробників сортування та інших інтерактивних елементів, які передаються до дочірніх компонентів.',
+						'Мета: забезпечити швидкий відгук на введення та кліки, навіть якщо обробка даних займає час.',
+					]}
+				/>
 				<div className="data-grid-actions">
 					<label className="data-grid-label">
 						<span>Name</span>

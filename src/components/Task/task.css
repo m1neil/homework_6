@@ -1,0 +1,44 @@
+.task {
+	&:not(:last-child) {
+		margin-bottom: 25px;
+	}
+}
+.task-title {
+	font-weight: 600;
+	line-height: 1.55556;
+	color: var(--accent-color);
+	&:not(:last-child) {
+		margin-bottom: 8px;
+	}
+}
+.task-description {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.42857;
+	p:not(:last-child) {
+		margin-bottom: 8px;
+	}
+	&:not(:last-child) {
+		margin-bottom: 15px;
+	}
+}
+.task-list {
+}
+.task-list-item {
+	display: flex;
+	align-items: flex-start;
+	column-gap: 10px;
+	line-height: 1.4;
+	&::before {
+		content: '';
+		width: 7px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background-color: var(--accent-color);
+		flex-shrink: 0;
+		margin-top: 9px;
+	}
+	&:not(:last-child) {
+		margin-bottom: 10px;
+	}
+}

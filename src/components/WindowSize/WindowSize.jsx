@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import useWindowSize from '../../hooks/useWindowSize'
+import Task from '../Task/Task'
 import './windowSize.css'
 
 function WindowSize() {
@@ -29,6 +30,13 @@ function WindowSize() {
 	return (
 		<div className="size">
 			<div className="size-container">
+				<Task
+					title="Задача 3. useWindowSize – розмір вікна браузера"
+					text={[
+						'Створіть кастомний хук useWindowSize, який повертає поточну ширину та висоту вікна браузера. Він повинен оновлюватися при зміні розміру вікна.',
+						'Створіть компонент, який відображає поточні розміри вікна браузера (ширина x висота), використовуючи useWindowSize. На основі розмірів відображати іконки монітора, планшета або телефона.',
+					]}
+				/>
 				<div className="size-items">
 					<div className="size-value">
 						Width: <span>{widthWindow}px</span>

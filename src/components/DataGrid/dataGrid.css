@@ -1,5 +1,4 @@
 .data-grid {
-	padding-block: 25px;
 }
 .data-grid-actions {
 	display: flex;
@@ -12,9 +11,8 @@
 	display: grid;
 	column-gap: 16px;
 	align-items: center;
-	grid-template-columns: minmax(auto, 120px) minmax(auto, 241px);
+	grid-template-columns: minmax(auto, 100px) minmax(auto, 241px);
 	span {
-		text-align: right;
 		font-size: 16px;
 		color: #000;
 		font-weight: 500;

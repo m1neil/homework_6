@@ -1,0 +1,26 @@
+.search {
+}
+.search-container {
+}
+.search-title {
+	margin-bottom: 10px;
+}
+.search-input {
+	margin-bottom: 20px;
+}
+.search-result {
+	list-style: none;
+	counter-reset: count;
+}
+.search-item {
+	display: flex;
+	column-gap: 10px;
+	&::before {
+		content: counter(count) ')';
+		counter-increment: count;
+		font-variant-numeric: tabular-nums;
+	}
+	&:not(:last-child) {
+		margin-bottom: 8px;
+	}
+}
